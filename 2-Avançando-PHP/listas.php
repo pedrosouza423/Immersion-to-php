@@ -4,9 +4,10 @@
 
 $idadeList = [19,20,17];
 
-for($i= 0; $i < count($idadeList); $i++){
-echo $idadeList[$i] . PHP_EOL;
+$idadeList[] = 20;
 
+foreach($idadeList as $idade){
+    echo $idade . PHP_EOL;
 }
 
 //count(array) conta quantos elementos tem em um array
