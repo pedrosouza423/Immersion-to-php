@@ -25,5 +25,11 @@ $devs = [
 $devs['038.986.861-24']['saldo'] -= 1500;
 
 foreach($devs as $cpf => $dev){
-    echo $cpf . " ". $dev['titular'] . " " . $dev['saldo'] . PHP_EOL;
+mensagem($cpf . " ". $dev['titular'] . " " . $dev['saldo']);
+
 }
+
+function mensagem ($mensagem){
+    echo $mensagem . PHP_EOL;
+}
+
