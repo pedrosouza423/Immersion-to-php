@@ -29,7 +29,7 @@ mensagem($cpf . " ". $dev['titular'] . " " . $dev['saldo']);
 
 }
 
-function mensagem ($mensagem){
+
+function mensagem($mensagem){
     echo $mensagem . PHP_EOL;
 }
-
