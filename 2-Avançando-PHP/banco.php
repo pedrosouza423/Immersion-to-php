@@ -2,6 +2,9 @@
 // Tipo objeto em JavaScript
 // Aqui é um array associativo
 
+//Inlcuindo funções
+require_once 'funcoes.php';
+
 // Código e dev
 $devs = [
     '038.986.861-24' => [
@@ -22,14 +25,11 @@ $devs = [
 
 ];
 
-$devs['038.986.861-24']['saldo'] -= 1500;
+$devs['223.358.987-37'] = sacar($devs['223.358.987-37'], 1500);
+$devs['038.986.861-24'] = depositar($devs['038.986.861-24'], 12000);
 
+//Percorrer o array
 foreach($devs as $cpf => $dev){
-mensagem($cpf . " ". $dev['titular'] . " " . $dev['saldo']);
-
+    mensagem("CPF:$cpf  NOME:$dev[titular]  SALDO:$dev[saldo]");
 }
 
-
-function mensagem($mensagem){
-    echo $mensagem . PHP_EOL;
-}
