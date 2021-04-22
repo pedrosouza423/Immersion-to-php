@@ -39,3 +39,8 @@ function sacar(array $conta, float $valor) :array {
 function mensagem(string $mensagem){
     echo $mensagem . PHP_EOL;
 }
+
+function titularComLetrasMaiusculas(array &$conta){
+    $conta['titular'] = mb_strtoupper($conta['titular']);
+    mensagem($conta['titular']);
+}

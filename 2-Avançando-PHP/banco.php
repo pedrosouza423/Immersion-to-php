@@ -27,9 +27,12 @@ $devs = [
 
 $devs['223.358.987-37'] = sacar($devs['223.358.987-37'], 1500);
 $devs['038.986.861-24'] = depositar($devs['038.986.861-24'], 12000);
+titularComLetrasMaiusculas($devs['038.986.861-24']);
+unset($devs['099.654.861-12']);
 
 //Percorrer o array
 foreach($devs as $cpf => $dev){
-    mensagem("CPF:$cpf  NOME:$dev[titular]  SALDO:$dev[saldo]");
+    ['titular' => $titular, 'saldo' => $saldo ] = $dev;
+    mensagem("CPF:$cpf  NOME:$titular  SALDO:$saldo");
 }
 
