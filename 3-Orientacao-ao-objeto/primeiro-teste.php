@@ -19,3 +19,15 @@ $segundaConta->nomeTitular = 'Wilson Teixeira';
 var_dump($umaNovaConta);
 var_dump($segundaConta);
 
+// $segundaConta->sacar(50);
+// var_dump($segundaConta);
+
+
+// $umaNovaConta->depositar(-500);
+// var_dump($umaNovaConta);
+
+$umaNovaConta->transferir(199, $segundaConta);
+
+echo "Foi transferido o valor". PHP_EOL;
+var_dump($umaNovaConta);
+var_dump($segundaConta);
