@@ -2,9 +2,17 @@
 
 class Conta
 {
-  public string $cpfTitular;
-  public string $nomeTitular;
-  public float $saldo = 0;
+  private string $cpfTitular;
+  private string $nomeTitular;
+  private float $saldo;
+
+//construtor
+  public function  __construct(string $cpf, string $nome)
+  {
+    $this->nomeTitular = $nome;
+    $this->cpfTitular = $cpf;
+    $this->saldo = 0;
+  }
 
   public function sacar(float $valorASacar)
   {
@@ -35,5 +43,28 @@ class Conta
 
     $this->sacar($valorATransferir);
     $contaDestino->depositar($valorATransferir);
+  }
+
+  //Para ver o saldo através do echo
+  public function recuperarSaldo() :float {
+    return $this->saldo;
+  }
+
+  //criar cpf e nome para a conta
+  // public function criarCPFTitular(string $cpf) :void {
+  //   $this->cpfTitular = $cpf;
+  // }
+
+  // public function criarNomeTitular(string $nome) :void {
+  //   $this->nomeTitular = $nome;
+  // }
+
+  //recuperar nome e cpf
+  public function recuperarNomeTitular() :string {
+    return $this->nomeTitular;
+  }
+
+  public function recuperarCPFTitular() :string {
+    return $this->cpfTitular;
   }
 }
