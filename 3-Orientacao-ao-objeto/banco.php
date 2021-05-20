@@ -4,6 +4,8 @@ require 'src/Conta.php';
 require 'src/Titular.php';
 require 'src/CPF.php';
 require 'src/Endereco.php';
+require 'src/Funcionario.php';
+require 'src/Pessoa.php';
 
 $endereco = new Endereco("Valparaiso", "Etapa A", "17", "21");
 $pedro = new Titular(new CPF("123.456.789-01"), "Pedro Souza", $endereco);

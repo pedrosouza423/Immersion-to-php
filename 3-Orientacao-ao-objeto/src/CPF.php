@@ -9,7 +9,10 @@ class CPF
         $this->cpf = $cpf;
     }
 
-
+    public function recuperarNumero() :string
+    {
+        return $this->cpf;
+    }
 
 }
 
